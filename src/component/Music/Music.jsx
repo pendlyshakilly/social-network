@@ -1,18 +1,14 @@
-import react from 'react';
-import f from './Music.module.css'
+import styles from './Music.module.css'
 
 
 
 
-const Musik= (props) => {
+const Music= (props) => {
     return (
-         <div>
-        <div className={f.content}>
-        Musik lalalalala
+        <div>
+            <div className={styles.content}> Musik lalalalala </div>
         </div>
-        </div>
-        );
-    }
+    );
+}
 
-
-export default Musik;
+export default Music;

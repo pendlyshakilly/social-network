@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import react from 'react';
 import Header from './component/Header/Header';
 import Nav from './component/Nav/Nav';
 import Content from './component/Content/Content';
@@ -10,7 +8,7 @@ import {BrowserRouter} from 'react-router-dom';
 import {Routes} from 'react-router-dom';
 import News from './component/News/News';
 import Setting from './component/Setting/Setting';
-import Musik from './component/Music/Music';
+import Music from './component/Music/Music';
 
 
 const App = (props) => {
@@ -22,10 +20,12 @@ const App = (props) => {
          <div class='app-wraper-content'>
           <Routes>
             <Route  path='/content' element={<Content/>}/>
-            <Route  path='/dialogs' element={<Dialogs/>}/>
+            <Route  path='/dialogs' element={<Dialogs/>}>
+              <Route  path=':id' element={<Dialogs/>}/>
+            </Route>
             <Route  path='/news' element={<News/>}/>
             <Route  path='/setting' element={<Setting/>}/>
-            <Route  path='/music' element={<Musik/>}/>
+            <Route  path='/music' element={<Music/>}/>
            </Routes>
          </div>
       </div>
