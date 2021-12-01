@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import react from 'react';
 import Header from './component/Header/Header';
 import Nav from './component/Nav/Nav';
 import Content from './component/Content/Content';

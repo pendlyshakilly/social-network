@@ -1,4 +1,3 @@
-import react from 'react';
 import s from './Mypost.module.css'
 import Post from './Post/Post';
 

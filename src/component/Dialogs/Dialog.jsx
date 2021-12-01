@@ -1,4 +1,3 @@
-import react from 'react';
 import { NavLink } from 'react-router-dom';
 import f from './Dialogs.module.css'
 
@@ -25,9 +24,7 @@ const Dialogs = (props) => {
                     <NavLink to="/dialogs/5" className={f.link}>Silvia</NavLink>
                     </div>
                     <div className={f.dialog}>
-                    <NavLink to="/dialogs/6" className={f.link}>
-                    <a>Denus</a>
-                     </NavLink>
+                    <NavLink to="/dialogs/6" className={f.link}>Denus</NavLink>
                     </div>
                </div>
                <div className={f.messages}>

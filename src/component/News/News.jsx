@@ -1,4 +1,3 @@
-import react from 'react';
 import e from './News.module.css'
 
 
