@@ -1,0 +1,10 @@
+.item{
+  color:#7fff00;
+  background-color:cornflowerblue ;
+  
+}
+.item img {
+  width: 45px;
+  height: 45px;
+  border-radius: 40px;
+}

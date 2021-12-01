@@ -1,0 +1,32 @@
+.nav{
+    grid-area: n;
+    background-color: burlywood;
+    width: 150px;
+}
+
+.item {
+  text-align: center;  
+  display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 100px;
+	height: 30px;
+	border: 2px solid cornflowerblue ;
+	border-radius: 40px;
+	background: #ffffff;
+	color: cornflowerblue ;
+	letter-spacing: 1px;
+	font-size: 18px;
+	
+  } 
+  
+.item {
+  text-decoration:none;
+  color:cornflowerblue;
+} 
+
+
+
+
+
+ 
