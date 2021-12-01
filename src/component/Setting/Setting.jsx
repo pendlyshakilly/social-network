@@ -1,17 +1,14 @@
-import f from './Setting.module.css'
+import styles from './Setting.module.css'
 
 
 
 
 const Setting= (props) => {
     return (
-         <div>
-        <div className={f.content}>
-        Setting
+        <div>
+            <div className={styles.content}> Setting </div>
         </div>
-        </div>
-        );
-    }
-
+    );
+}
 
 export default Setting;
