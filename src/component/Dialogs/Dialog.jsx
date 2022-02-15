@@ -1,36 +1,51 @@
 import { NavLink } from 'react-router-dom';
-import styles from './Dialogs.module.css'
+import s from './Dialogs.module.css'
 
 
 
+
+const DialogItem = (props) => {
+    let path= "/dialogs/" + props.id;
+ 
+    return <div className={s.dialog + ' ' +  s.active}>
+        <NavLink to={path}>{props.name}</NavLink>
+    </div>
+  
+}
+
+
+
+const Message = (props) => {
+    return <div className={s.dialog}>{props.messeg}</div>
+}
 
 const Dialogs = (props) => {
+    
+    let dialogData = [
+    {id: 1, name: 'Dymich'},
+    {id: 2, name: 'Andrey'},
+    {id: 3, name: 'Svet'},
+    {id: 4, name: 'Vlad'}
+    ]
+    
+    let messageData = [
+        {id: 1, message: 'yoyo'},
+        {id: 2, message: 'hahaha'},
+        {id: 3, message: 'hello'},
+        {id: 4, message: 'goodbye'}
+    ]
+    
+    
     return (
-        <div className={styles.dialogs}> 
-            <div className={styles.dialogsItem}>
-                <div className={styles.dialog + ' ' +  styles.active}>
-                    <NavLink to="/dialogs/1" className={styles.link}>Dimych</NavLink>
-                </div>
-                <div className={styles.dialog}>
-                    <NavLink to="/dialogs/2" className={styles.link}>Andrey</NavLink>
-                </div>
-                <div className={styles.dialog}>
-                    <NavLink to="/dialogs/3" className={styles.link}>Sveta</NavLink>
-                </div>
-                <div className={styles.dialog}>
-                    <NavLink to="/dialogs/4" className={styles.link}>Vlad</NavLink>
-                </div>
-                <div className={styles.dialog}>
-                    <NavLink to="/dialogs/5" className={styles.link}>Silvia</NavLink>
-                </div>
-                <div className={styles.dialog}>
-                    <NavLink to="/dialogs/6" className={styles.link}>Denus</NavLink>
-                </div>
+        <div className={s.dialogs}> 
+            <div className={s.dialogItem}>
+                     <DialogItem name={dialogData[0].name} id={dialogData[0].id} />
+                     <DialogItem name={dialogData[1].name} id={dialogData[1].id}/>
             </div>
-            <div className={styles.messages}>
-                 <div className={styles.dialog}>Hi</div>
-                 <div className={styles.dialog}>How are you</div>
-                 <div className={styles.dialog}>Yo</div> 
+            <div className={s.messages}>
+                 <Message message={messageData[0].message}/>
+                 <Message message={messageData[1].message}/>
+                 
             </div>
         </div>
     );
