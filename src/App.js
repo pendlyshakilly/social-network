@@ -19,13 +19,12 @@ const App = (props) => {
          <Nav/>
          <div class='app-wraper-content'>
           <Routes>
-            <Route  path='/content' element={<Content/>}/>
-            <Route  path='/dialogs' element={<Dialogs/>}>
-              <Route  path=':id' element={<Dialogs/>}/>
-            </Route>
-            <Route  path='/news' element={<News/>}/>
-            <Route  path='/setting' element={<Setting/>}/>
-            <Route  path='/music' element={<Music/>}/>
+            <Route  path='/content' render={ () => <Content/>  }/>
+            <Route  path='/dialogs' render={ () => <Dialogs/>} />
+            <Route  path=':id' render={ () => <Dialogs/>} />
+            <Route  path='/news' render={ () => <News/>} />
+            <Route  path='/setting' render={ () => <Setting/>} />
+            <Route  path='/music' render={ () => <Music/>} />
            </Routes>
          </div>
       </div>
