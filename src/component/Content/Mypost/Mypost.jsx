@@ -3,15 +3,10 @@ import Post from './Post/Post';
 
 
 
-const Mypost = () => {
+const Mypost = (props) => {
     
-    let message = [
-        {id: 1, mess: 'hello my name illy', likeC:12},
-        {id: 2, mess: 'hello my name dimich', likeC:11},
-    ]
-    
-let messageElement = message.map
-(m =><Post massege={m.mess} like={m.likeC}/>)
+
+let postsElement = props.posts.map(m =><Post massege={m.mess} like={m.likeC}/>)
     
     return <div>      
     <div className={styles.item}>
@@ -19,7 +14,7 @@ let messageElement = message.map
         <div>ava + destription</div>
         <textarea></textarea>
         <button>add post</button>
-        {messageElement}    
+        {postsElement}    
         </div>
     </div>
         

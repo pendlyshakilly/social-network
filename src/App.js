@@ -2,7 +2,7 @@ import './App.css';
 import Header from './component/Header/Header';
 import Nav from './component/Nav/Nav';
 import Content from './component/Content/Content';
-import Dialogs from './component/Dialogs/Dialog';
+import Dialogs from './component/Dialogs/Dialog2';
 import {Route} from 'react-router-dom';
 import {BrowserRouter} from 'react-router-dom';
 import {Routes} from 'react-router-dom';
@@ -19,12 +19,12 @@ const App = (props) => {
          <Nav/>
          <div class='app-wraper-content'>
           <Routes>
-            <Route  path='/content' render={ () => <Content/>  }/>
-            <Route  path='/dialogs' render={ () => <Dialogs/>} />
-            <Route  path=':id' render={ () => <Dialogs/>} />
-            <Route  path='/news' render={ () => <News/>} />
-            <Route  path='/setting' render={ () => <Setting/>} />
-            <Route  path='/music' render={ () => <Music/>} />
+            <Route  path='/content' element={<Content posts={props.posts}/>} />
+            <Route  path='/dialogs' element={<Dialogs dialog={props.dialog} messages={props.messages} />} />
+            <Route  path='/dialogs/:userId' element={<Dialogs />}/>
+            <Route  path='/news' element={<News/>} />
+            <Route  path='/setting' element={<Setting/>} />
+            <Route  path='/music' element={<Music/>} />
            </Routes>
          </div>
       </div>
