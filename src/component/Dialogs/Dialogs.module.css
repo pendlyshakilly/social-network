@@ -1,27 +1,36 @@
-.dialogs{
-    padding: 15px;
-    display: grid;
-    grid-template-columns: 2fr  10fr;
-    text-decoration:none;
+.dialogs {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  text-decoration: none;
 }
 
-.dialogsItem{
-   padding: 20px;
-   color: white;
+img {
+  width: 35px;
+  height: 35px;
+  border-radius: 40px;
 }
 
-
-.dialogsItem .active{
-
-    color: gold;
+.dialogsItem {
+  padding: 20px;
+  color: white;
 }
 
-
-.messages .message{
- color: rgb(233, 130, 130);
+.dialogsItem {
+  width: 45px;
+  height: 45px;
+  border-radius: 40px;
 }
 
-.link{
+.dialogsItem .active {
+  color: gold;
+}
+
+.messages .message {
+  color: rgb(233, 130, 130);
+}
+
+.link {
   color: rgb(105, 240, 93);
-  text-decoration:none;
+  text-decoration: none;
 }
