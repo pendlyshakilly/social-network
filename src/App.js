@@ -3,7 +3,11 @@ import Header from './component/Header/Header';
 import Nav from './component/Nav/Nav';
 import Content from './component/Content/Content';
 import Dialogs from './component/Dialogs/Dialogs';
+<<<<<<< HEAD
 import {Route} from 'react-router-dom';
+=======
+import {Navigate, Route} from 'react-router-dom';
+>>>>>>> b833abdbacbb685e1d4bbb886d08be0328637bcd
 import {BrowserRouter} from 'react-router-dom';
 import {Routes} from 'react-router-dom';
 import News from './component/News/News';
@@ -21,7 +25,11 @@ const App = (props) => {
           <Routes>
             <Route  path='/content' element={<Content posts={props.posts}/>} />
             <Route  path='/dialogs' element={<Dialogs dialog={props.dialog} messages={props.messages} />} />
+<<<<<<< HEAD
             <Route  path='/dialogs/:userId' element={<Dialogs dialog={props.dialog} messages={props.messages} />}/>
+=======
+            <Route  path='/dialogs/:userId' element={<Dialogs dialog={props.dialog} messages={props.messages} />} />
+>>>>>>> b833abdbacbb685e1d4bbb886d08be0328637bcd
             <Route  path='/news' element={<News/>} />
             <Route  path='/setting' element={<Setting/>} />
             <Route  path='/music' element={<Music/>} />
