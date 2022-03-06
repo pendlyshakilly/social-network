@@ -11,7 +11,7 @@ const Content = (props) => {
         ></img>
       </div>
       <div>
-        <Mypost posts={props.state.posts} />
+        <Mypost posts={props.state.posts} addPost={props.addPost} />
       </div>
     </div>
   );

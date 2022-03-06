@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from '../../render';
+
 let state = {
   contentPage: {
     posts: [
@@ -21,4 +23,13 @@ let state = {
   },
 };
 
+export let addPost = (postMess) => {
+  let newPost = {
+    id: 5,
+    message: postMess,
+    likeC: 0,
+  };
+  state.contentPage.posts.push(newPost);
+  rerenderEntireTree(state);
+};
 export default state;

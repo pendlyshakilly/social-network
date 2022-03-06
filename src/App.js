@@ -10,13 +10,14 @@ import Setting from './component/Setting/Setting';
 import Music from './component/Music/Music';
 
 const App = (props) => {
+  debugger;
   return (
     <div className='app-wraper'>
       <Header />
       <Nav />
       <div class='app-wraper-content'>
         <Routes>
-          <Route path='/content' element={<Content state={props.state.contentPage} />} />
+          <Route path='/content' element={<Content state={props.state.contentPage} addPost={props.addPost} />} />
           <Route
             path='/dialogs'
             element={<Dialogs state={props.state.messagesPage} state={props.state.messagesPage} />}

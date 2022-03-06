@@ -34,3 +34,7 @@ img {
   color: rgb(105, 240, 93);
   text-decoration: none;
 }
+
+.textarea {
+  padding: 15px;
+}
