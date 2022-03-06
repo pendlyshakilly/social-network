@@ -3,8 +3,8 @@ import { rerenderEntireTree } from '../../render';
 let state = {
   contentPage: {
     posts: [
-      { id: 1, mess: 'hello my name illy', likeC: 12 },
-      { id: 2, mess: 'hello my name dimich', likeC: 11 },
+      { id: 1, messagePost: 'hello my name illy', likeC: 12 },
+      { id: 2, messagePost: 'hello my name dimich', likeC: 11 },
     ],
   },
   messagesPage: {
@@ -26,7 +26,7 @@ let state = {
 export let addPost = (postMess) => {
   let newPost = {
     id: 5,
-    message: postMess,
+    messagePost: postMess,
     likeC: 0,
   };
   state.contentPage.posts.push(newPost);

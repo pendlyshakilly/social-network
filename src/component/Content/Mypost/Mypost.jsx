@@ -3,10 +3,9 @@ import Post from './Post/Post';
 import React from 'react';
 
 const Mypost = (props) => {
-  let postsElement = props.posts.map((m) => <Post massege={m.mess} like={m.likeC} />);
+  let postsElement = props.posts.map((m) => <Post massege={m.messagePost} like={m.likeC} />);
 
   let newPostElement = React.createRef();
-  debugger;
   let addPosts = () => {
     let text = newPostElement.current.value;
     props.addPost(text);
